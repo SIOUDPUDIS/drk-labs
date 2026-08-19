@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRKHack | Operasyon Merkezi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Arka Planda Ortamı Aydınlatan Şimşek / Flaş Efekti -->
+    <div id="lightning-flash"></div>
+
+    <!-- Kutunun Dışında, En Üstte Devasa Elektrikli DRKHACK Logosu -->
+    <div class="mega-logo-container">
+        <h1 class="mega-cyber-title">DRKHACK</h1>
+    </div>
+
+    <!-- Açılış Animasyon Katmanı -->
+    <div id="intro-loader">
+        <div class="loader-content">
+            <h1>DRK HACK</h1>
+            <p>Sistemler Yükleniyor...</p>
+        </div>
+    </div>
+
+    <!-- Bağlantı Koptu / Fail-Safe Ekranı -->
+    <div id="connection-error" class="hidden">
+        <div class="error-box">
+            <h2>⚠️ BAĞLANTI KOPTU</h2>
+            <p>Sunucu ile bağlantı kesildi. Lütfen daha sonra tekrar deneyiniz.</p>
+        </div>
+    </div>
+
+    <!-- Sol Yan Pencere (Hacker Log / Bilgi) -->
+    <div class="side-panel left-panel">
+        <h3>[ SYSTEM LOGS ]</h3>
+        <p id="typewriter-left"></p>
+    </div>
+
+    <!-- Ana İçerik / Form -->
+    <div class="main-container">
+        <div class="glass-card">
+            <h2>OPERASYON MERKEZİ</h2>
+            <p>İhtiyacınızı ve iletişim kanalınızı seçin.</p>
+            
+            <!-- Tek Aşamalı İşlem Formu -->
+            <form id="hack-form">
+                <textarea id="user-message" placeholder="İsteğinizi buraya yazın..." required></textarea>
+                
+                <div class="platform-select">
+                    <label>İletişim Kanalı:</label>
+                    <select id="user-platform" required>
+                        <option value="" disabled selected>Platform Seçin</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="TikTok">TikTok</option>
+                        <option value="Telegram">Telegram</option>
+                    </select>
+                </div>
+
+                <!-- Kullanıcı adı veya doğrudan profil URL'si girilecek alan -->
+                <input type="text" id="user-contact" placeholder="Kullanıcı adı veya profil URL'si" required>
+                <button type="submit" id="btn-submit">İŞLEMİ BAŞLAT</button>
+            </form>
+
+            <div id="response-status"></div>
+        </div>
+    </div>
+
+    <!-- Sağ Yan Pencere (Şaka / Bilgilendirme Yazı Alanı) -->
+    <div class="side-panel right-panel">
+        <h3>[ PRANK MODULE ]</h3>
+        <p id="typewriter-right"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
